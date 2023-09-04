@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(135deg,rgb(17, 14, 181),rgb(98, 0, 146));
+    padding: 10px;
+}
+.todo{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    background: white;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo h2{
+    padding: 10px;
+    margin: 5px;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.706);
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    background-color: rgba(128, 128, 128, 0.229);
+    border-radius: 35px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+#add{
+    background-color: rgba(255, 0, 0, 0.811);
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    border-radius: 35px;
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    border: none;
+}
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unt.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.check{
+    text-decoration: line-through
+}
+ul li.check::before{
+    background-image: url(check.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
+
+@media (max-width:380px) {
+    .todo{
+        width: 60%;
+        padding: 20px 30px 70px;
+    }
+
+    .todo h2{
+        padding: 20px;
+        margin: 5px;
+        font-size: 1.25rem;
+    }
+    input{
+        padding: 5px;
+        font-size: 12px;
+        width: 100px;
+    }
+    #add{
+        padding: 5px;
+        border-radius: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+        border: none;
+    }
+    ul li{
+        font-size: 15px;
+        padding: 16px 9px 10px 35px;
+    }
+    ul li::before{
+        height: 25px;
+        width: 25px;
+    }
+    ul li span{
+        right: 10px;
+        top: 4px;
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        line-height: 40px;
+
+    }
+}
